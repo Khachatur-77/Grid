@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+}
+
+.container{
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    text-transform: uppercase;
+}
+
+.item {
+    padding: 20px;
+}
+
+.header {
+    background-color: black;
+    grid-column: 1 / span 1;
+    color: var(--white);
+}
+
+.menu {
+    background-color: red;
+    grid-column: 1 / span 1;
+    color: var(--white);
+}
+
+.hero {
+    background-color: cornflowerblue;
+    grid-row: 3 /  span 2;
+    color: var(--white);
+}
+
+.main {
+    background-color: darkslateblue;
+    grid-row: 5 / span 2;
+    color: var(--white);
+}
+
+.banner {
+    background-color: yellow;
+    color: var(--black);
+}
+
+.extra {
+    background-color: lightgreen;
+    color: var(--black);
+}
+
+.image {
+    background-color: aqua;
+    color: var(--black);
+}      
+
+
+@media screen and (min-width: 768px) and (max-width:1280px) {
+    .header{
+        grid-column: 1/ span 5;
+        grid-row: 1 / 1;
+    }
+
+    .hero {
+        grid-column: 1 / 6;
+        grid-row: 2 / 7;
+    }
+
+    .menu {
+        grid-column: 1 / 1;
+        grid-row: 5 / span 8;
+    }
+
+    .main {
+        grid-column: 2 / span 4;
+        grid-row: 7 / span 4;
+    }
+
+    .banner {
+        grid-column: 2 / span 4;
+        grid-row: 11 / 12 ;
+    }
+
+    .extra {
+        grid-column: 2 / span 3;
+        grid-row: 12 / 13;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .header {
+        grid-column: 1 / 6;
+        grid-row: 1/ 2;
+    }
+    
+    .menu {
+        grid-column: 2 / 6;
+        grid-row: 1 / 2;
+    }
+
+    .hero {
+        grid-column: 1 / 6;
+        grid-row: 2 / span 4;
+    }
+
+    .main {
+        grid-column: 1 / span 3;
+        grid-row: 6 / span 2;
+    }
+
+    .image {
+        grid-column: 5 / 6;
+        grid-row: 6 / 7;
+    }
+
+    .extra {
+        grid-column: 5 / 6;
+        grid-row: 7 / 8;
+    }
+
+    .banner {
+        grid-column:  1 / 6;
+        grid-row: 8 / 9;
+    }
+}
